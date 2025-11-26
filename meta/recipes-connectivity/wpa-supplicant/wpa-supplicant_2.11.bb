@@ -48,6 +48,7 @@ do_configure () {
 		echo 'CONFIG_TLS=gnutls' >>wpa_supplicant/.config
 		sed -i -e 's/\(^CONFIG_DPP=\)/#\1/' \
 		    -e 's/\(^CONFIG_EAP_PWD=\)/#\1/' \
+		    -e 's/\(^CONFIG_OWE=\)/#\1/' \
 		    -e 's/\(^CONFIG_SAE=\)/#\1/' wpa_supplicant/.config
 	fi
 
